@@ -2,8 +2,15 @@ import math
 import sys
 
 def main(p):
+    if not isPrime(p):
+        print(p, "p is not a prime")
+        return False
     #such that p- 1 = 2q, where q is also prime.
     q = int((p - 1)/2)
+
+    if not isPrime(q):
+        print(q, "q is not a prime")
+        return False
 
     #The group G is the subgroup of order q in Zp*
     G = subgroup(q, p)
@@ -32,6 +39,14 @@ def subgroup(sub, modulo):
     subgroup.sort()
     return subgroup
 
+def isPrime(n) :
+    p = int(math.ceil(math.sqrt(n)))
+    for i in range(2, p):
+        if(n % i == 0):
+            return False
+
+    return True
+
 #We choose a large prime p
-prime = int(sys.argv[1])
+prime = long(sys.argv[1])
 main(prime)

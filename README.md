@@ -4,6 +4,12 @@ Given the [list of project](https://fenix.tecnico.ulisboa.pt/downloadFile/168946
 
 Developed by Pasquale Carnevale(97735) and Thamara Hessel(97872) 
 
+https://bigprimes.org/
+
 Run
 make run prime=7
-make run prime=335
+make run prime=47
+make run prime=347
+
+
+
