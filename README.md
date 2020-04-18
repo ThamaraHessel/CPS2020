@@ -10,6 +10,7 @@ Run
 make run prime=7
 make run prime=47
 make run prime=347
+make run prime=57719
 
 
 
