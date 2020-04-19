@@ -7,10 +7,10 @@ Developed by Pasquale Carnevale(97735) and Thamara Hessel(97872)
 https://bigprimes.org/
 
 Run
-make run prime=7
-make run prime=47
-make run prime=347
-make run prime=57719
+make run prime=7 msg=test
+make run prime=47 msg=test
+make run prime=347 msg=test
+make run prime=57719 msg=test
 
 
 

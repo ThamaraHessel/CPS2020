@@ -5,4 +5,4 @@ list:
 
 .PHONY: run
 run:
-	docker run -it -v $(shell pwd):/usr/src/project:rw python:latest python /usr/src/project/main.py ${prime}
+	docker run -it -v $(shell pwd):/usr/src/project:rw python:latest python /usr/src/project/main.py ${prime} ${msg}
