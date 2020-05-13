@@ -16,6 +16,10 @@ make run prime=347 msg=test
 
 make run prime=57719 msg=test
 
+make run prime=65867 msg=test
+
+make run prime=81707 msg=test
+
 Or
 
 python main.py 347 t
