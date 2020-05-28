@@ -3,7 +3,7 @@ import sys
 import random
 import numpy
 
-LOG = 1
+LOG = 0
 
 def main():
     m = sys.argv[2]
@@ -148,7 +148,6 @@ def keysGenerator(G,Zq,mod):
     c = ((powMod(g1,x1,mod) * powMod(g2,x2,mod))%mod)
     logTrace('c',c, LOG)
 
-
     d1 = ((powMod(g1,y1a,mod) * powMod(g2,y2a,mod))%mod)
     d2 = ((powMod(g1,y1b,mod) * powMod(g2,y2b,mod))%mod)
     d3 = ((powMod(g1,y1c,mod) * powMod(g2,y2c,mod))%mod)
@@ -181,7 +180,6 @@ def group(p):
 
     group.sort()
     return group
-
 
 def subgroup(pow, mod):
     subgroup = []
