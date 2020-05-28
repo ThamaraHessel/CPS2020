@@ -24,6 +24,11 @@ def main():
     logTrace("q", q, LOG)
 
     G = subgroup(q, p)
+
+    if len(G) < 255:
+        print(len(G), "The subgroup must contain at least 255 to support ASCII")
+        return False
+
     logTrace("subgroup", G, LOG)
 
     Zq = group(q)
