@@ -2,7 +2,6 @@ import math
 import sys
 import random
 import numpy
-import string
 
 LOG = 1
 
@@ -37,10 +36,11 @@ def main():
     print("Encrypted message", enc)
 
     dec = decrypt(enc,p,G,keys)
+
     print("Decrypted message", dec)
 
 def decrypt(enc,mod,G,keys):
-    message = []
+    message = ''
     for j in range(0, len(enc)):
 
         u1 = enc[j][0]
@@ -57,11 +57,11 @@ def decrypt(enc,mod,G,keys):
             for i in range(0, mod):
                 if powMod(u1,z,mod)*i%mod == 1:
                     inv = i
-            message.append((chr(G.index(e*inv%mod))))
+            message=message+(chr(G.index(e*inv%mod)))
         else:
             return 'rejected'
 
-    return string.join(message)
+    return message
 
 
 def encrypt(message, keys, G, Zq, p):
