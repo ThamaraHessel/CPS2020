@@ -193,8 +193,20 @@ def subgroup(pow, mod):
     subgroup.sort()
     return subgroup
 
-def powMod(i,pow,mod):
-     return int((i**pow)%mod)
+def powMod(i, pow, mod):
+    r = 1
+    i = i % mod
+
+    if (i == 0) :
+        return 0
+
+    while (pow > 0) :
+        if ((pow & 1) == 1) :
+            r = (r * i) % mod
+        pow = pow >> 1
+        i = (i * i) % mod
+
+    return r
 
 def generator(pow, mod):
     for i in range(2, mod):
