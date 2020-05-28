@@ -60,9 +60,7 @@ def decrypt(enc,mod,G,keys):
             message=message+(chr(G.index(e*inv%mod)))
         else:
             return 'rejected'
-
     return message
-
 
 def encrypt(message, keys, G, Zq, p):
     encrypt = []
@@ -205,7 +203,6 @@ def generator(pow, mod):
             logTrace('generator',i, LOG)
             return i
 
-
 def isPrime(n) :
     p = int(math.ceil(math.sqrt(n)))
 
@@ -221,8 +218,5 @@ def isPrime(n) :
 def logTrace(traceKey, traceValue, enable) :
     if (int(enable) == 1):
         print(traceKey+" =>=>=> ", traceValue)
-
-
-#We choose a large prime p
 
 main()
