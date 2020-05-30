@@ -59,10 +59,10 @@ def encrypt(message, keys, G, Zq, p):
         encrypt.append(cipher)
     return encrypt
 ```
-[!image](ecryption.png)
+[image](ecryption.png)
 ##### Decryption
 The decryption happens very simply with the obvious output of the encryption, compared to the classic use that have proposed Cramer and Shoup, implementing the lite version we consider, we do not have the Hash function but through the verification of this relationship:  
-[!image](decryption.png)
+[image](decryption.png)
 ##### Proof of Security 
 This algorithm is of fundamental importance and can be considered a milestone in Cryptography. Until 1998 there was no Algorithm capable of withstanding a men in the middle attack, or rather, there were, but all these algorithms have ideal and not real security. Still today we can consider the Cramer and Shour algorithm resistant to these types of attacks and this is due to the robustness of the famous Diffie-Helmann problem.
 This is because the triple from the group G , and therefore the decryption of the massage becomes a difficult problem when there is a discrete logarithm that is not executable in a polynomial time.
