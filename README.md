@@ -17,7 +17,7 @@ The code must run on terminal!
 
 `python main.py 81707 "some text"` 
 
-To see the trace ,you have to set 1 the variable ENABLED_TRACE. The variable DECODE is take by default, if is needed to change it, please see this [link](https://docs.python.org/3.7/library/codecs.html#standard-encodings)
+To see the trace ,you have to set 1 the variable ENABLED_TRACE. The variable DECODE is take by default, if is needed to change it, please see this [link](https://docs.python.org/3.7/library/codecs.html#standard-encodings).
 
 
 ### Introduction
