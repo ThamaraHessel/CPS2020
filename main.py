@@ -42,7 +42,7 @@ def main():
 
     dec = decrypt(enc,p,G,keys)
 
-    print("Decrypted message", dec)
+    print("Decrypted message: " + dec)
 
 def decrypt(enc,mod,G,keys):
     message = ''
@@ -70,7 +70,7 @@ def decrypt(enc,mod,G,keys):
 def encrypt(message, keys, G, Zq, p):
     encrypt = []
     for i in range(0, len(message)):
-        logTrace("message[i]", message[i], LOG)
+        logTrace("message", message[i], LOG)
         m = G[(message[i])]
         logTrace("m", m, LOG)
         cipher = cipherText(Zq, p, keys, m)
