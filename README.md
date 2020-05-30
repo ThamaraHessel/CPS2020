@@ -13,9 +13,6 @@ python main.py 57719 "some text"
 
 python main.py 81707 "some text"
 
-### Abstract
-
-
 ### Introduction
 The need to hide strategic messages from enemy eyes is as old as man's and with the passage of time a science was born that studies methods to "blur" this message, cryptogram, and make it invisible to people not authorized to read it. 
 Cryptography has evolved a lot until today, and in this work we explore the use of asymmetric cryptography, which algorithms such as RSA and Rabin are the cornerstones of its. We explain how we managed to implement a CCA ecryption scheme based on DDH. We chose Python as the programming language for this project, as it allowed us to use some functions and libraries (one of them numpy) that made the work much faster and also intuitive. 
@@ -65,4 +62,8 @@ def encrypt(message, keys, G, Zq, p):
 ##### Decryption
 The decryption happens very simply with the obvious output of the encryption, compared to the classic use that have proposed Cramer and Shoup, implementing the lite version we consider, we do not have the Hash function but through the verification of this relationship:  
 
-![decrypt](file:///C:/Users/i_por/Desktop/Criptography/decryprion.png)
+##### Proof of Security 
+This algorithm is of fundamental importance and can be considered a milestone in Cryptography. Until 1998 there was no Algorithm capable of withstanding a men in the middle attack, or rather, there were, but all these algorithms have ideal and not real security. Still today we can consider the Cramer and Shour algorithm resistant to these types of attacks and this is due to the robustness of the famous Diffie-Helmann problem.
+This is because the triple from the group G , and therefore the decryption of the massage becomes a difficult problem when there is a discrete logarithm that is not executable in a polynomial time.
+##### Conclusion 
+All the work was not very tiring, as it involved a simple implementation that was done gradually and not with much difficulty given the help of python and the very intuitive structuring of the code itself. The algorithm also responds quite quickly because it doesn't foresee many operations that also make it a good start for a possible future approach of it. In addition, the execution of the Hash function variant was very interesting both on a theoretical and practical level. 
