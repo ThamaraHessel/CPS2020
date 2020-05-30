@@ -65,4 +65,4 @@ def encrypt(message, keys, G, Zq, p):
 ##### Decryption
 The decryption happens very simply with the obvious output of the encryption, compared to the classic use that have proposed Cramer and Shoup, implementing the lite version we consider, we do not have the Hash function but through the verification of this relationship:  
 
-![image info](./pictures/image.png)
+![decrypt](file:///C:/Users/i_por/Desktop/Criptography/decryprion.png)
