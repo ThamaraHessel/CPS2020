@@ -59,6 +59,7 @@ def encrypt(message, keys, G, Zq, p):
         encrypt.append(cipher)
     return encrypt
 ```
+[!image](ecryption.png)
 ##### Decryption
 The decryption happens very simply with the obvious output of the encryption, compared to the classic use that have proposed Cramer and Shoup, implementing the lite version we consider, we do not have the Hash function but through the verification of this relationship:  
 [!image](decryption.png)
