@@ -17,7 +17,7 @@ python main.py 57719 "some text"
 
 python main.py 81707 "some text"
 
-To see the trace ,you have to set 1 the variable ENABLED_TRACE. The variable DECODE is take by default, if is needed to change it, please see this link[https://docs.python.org/3.7/library/codecs.html#standard-encodings]
+To see the trace ,you have to set 1 the variable ENABLED_TRACE. The variable DECODE is take by default, if is needed to change it, please see this [link](https://docs.python.org/3.7/library/codecs.html#standard-encodings)
 
 
 ### Introduction
@@ -49,9 +49,9 @@ def main():
     ...
     sys.stdout.buffer.write(dec.encode(DECODE))
 ```
-A peculiarity that can be immediately noticeable is the *<* 255, because if we want to encode our message in ASCII extended[2], a G group smaller than this number would not allow us to do it. The last string allows us to decrypt all characters including special its.
+A peculiarity that can be immediately noticeable is the *<* 255, because if we want to encode our message in [ASCII extended](https://en.wikipedia.org/wiki/Extended_ASCII), a G group smaller than this number would not allow us to do it. The last string allows us to decrypt all characters including special its.
 ##### Key Generator
-The generation of the keys is quite simple and has some changes because we have chosen to implement a version without Hash function: there are the creation of more variables *y1,y2* because now we would have a vector d1 ...dk. 
+The generation of the keys is quite simple and has some changes because we have chosen to implement a version without Hash function: there are the creation of more variables *y1,y2* because now we would have a vector d1 ...dk.
 ##### Encryption
 The *encrypt* function requires the incoming message, previously converted to , and by encoding it in G it passes it to the *chipertext* function which is the heart of the algorithm. 
 It, like our [paper](https://link.springer.com/content/pdf/10.1007/BFb0055717.pdf) from which we refer, uses public and private keys to generate the hidden message. Letter by letter the *encription* is executed first, then the *chiper* function and finally this now encrypted letter is copied into a vector that will be finally printed our encrypted message.
@@ -80,5 +80,3 @@ This is because the triple from the group G , and therefore the decryption of th
 All the work was not very tiring, as it involved a simple implementation that was done gradually and not with much difficulty given the help of python and the very intuitive structuring of the code itself. The algorithm also responds quite quickly because it doesn't foresee many operations that also make it a good start for a possible future approach of it. In addition, the execution of the Hash function variant was very interesting both on a theoretical and practical level. 
 
 
-### Reference 
-[1] https://en.wikipedia.org/wiki/Extended_ASCII
